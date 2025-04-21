@@ -1,0 +1,75 @@
+
+## Exericse in ch.2
+
+## 2.1
+100*(1+0.05/12)^24
+
+## 2.2
+5%%2 ## %% means residual. 5/2=2.5, 0.5 round to 1 which is residual.
+
+## 2.3
+3333%%222 ## residual is 3, since 222*15=3330, and 3333-3330=3
+
+## 2.4
+for (n in 1:10) {
+    print (1+1/n)^n # this will make R think that he will calculate (1+1/n)
+}
+
+n_values <- c(1, 2, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000, 1e5, 1e6)
+for (n in n_values) {
+    print ((1+1/n)^n) # so I should always put the parenteses on in for loop
+}
+# this is called "operator precedence" in R.
+
+## 2.5
+options(digits=10) # in order to have 10-digits accuracy
+psi <- (1+sqrt(5))/2
+psi
+
+## 2.6
+c <- 299792458 #light_speed
+m <- 10 # 10 kilograms of mass
+print(E <- m*c^2) # Alber Einstein's formula of energy
+
+## 2.7
+G <- 6.67*10^(-11) #gravitational constant
+m1 <-  5.97*10^24
+m2 <- 7.35*10^22
+r <-  384000000
+print(F <- (G*m1*m2)/r^2)
+
+## 2.8
+print(pi)
+print(sin(pi/96))
+print(1/2*sqrt(2-sqrt(2+sqrt(2+sqrt(2+sqrt(3))))))
+# these 2 approaches gives identical result, given 10 digits precision.
+
+## 2.9
+sin(x)
+## not fully sure how to solve it
+
+
+## 2.10
+8/2*(2+2)
+
+## 2.11
+n_values <- 1:50
+n_values
+for (n in n_values){
+    x_n <- ((1+sqrt(5))^n -(1-sqrt(5))^n)/(2^n*sqrt(5))
+    print(x_n)
+} 
+
+
+## 2.12
+x_real=(-3+sqrt(3^2-4*1*2))/(2*1)
+print(x_real) #-1
+x_complex=(-3-sqrt(3^2-4*1*2))/(2*1)
+print(x_complex) #-2
+
+# in a row
+a <- 1; b <- 3; c <- 2
+x <- (-b + c(-1,1)*sqrt(b^2-4*a*c))/(2*a)
+print(x)
+
+
