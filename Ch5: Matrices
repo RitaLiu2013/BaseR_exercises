@@ -1,0 +1,59 @@
+## Exericse in ch.5
+
+## 5.1
+line1 <- 5:9
+line2 <- rep(12,5)
+line3 <- c(81,64,49,36,25)
+line4 <- c(2,8,4,7,3)
+
+rbind(line1,line2,line3,line4)
+
+## 5.2
+elements_A <- 1:6
+elements_B <- 7:12
+
+A <- matrix(elements_A, nrow=3,ncol=2)
+B <- matrix(elements_B, nrow=3,ncol=2)
+B
+
+## 5.3
+x <- matrix(11:18,nrow=2, ncol=4,byrow=FALSE)
+x
+
+## 5.4
+A <- matrix(c(0.8,0.2,0.3,0.7),nrow=2, ncol=2, byrow=TRUE)
+A
+
+## 5.5
+data <- c(1,rep(2,2), rep(3,3), rep(4,4))
+data
+b <- matrix(data, nrow=2, ncol=5, byrow=TRUE)
+b
+
+
+## 5.6
+A_elements <- matrix(1:100, ncol=10, byrow=TRUE)
+A_elements
+A <- A_elements[1:10,-2] # delete the 2nd column
+A <- A_elements[1:10,-2:-3] # delete the 2nd and 3rd columns.
+A
+
+
+## 5.7
+matrix_A <- matrix(1:4, nrow=2)
+matrix_A
+determinant <- matrix_A[1,1]*matrix_A[2,2]-matrix_A[2,1]*matrix_A[1,2]
+determinant # ad-bc
+
+## 5.8
+## 5.9 is very similar to 5.8
+
+## 5.10
+elementary_matrix <- matrix(1:15, nrow=3, ncol=5)
+elementary_matrix
+elementary_matrix[3,]
+elementary_matrix[3,] <- elementary_matrix[3,]-2*elementary_matrix[1,]
+elementary_matrix
+
+
+
