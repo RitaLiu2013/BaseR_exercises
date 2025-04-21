@@ -1,0 +1,47 @@
+## Exericse in ch.3
+
+## 3.1
+D <- 1000;K <- 5;h <- 0.25
+Q <- sqrt((2*D*K)/h)
+print(Q)
+
+## 3.2
+t <- 30; P <- 100000; r_monthly <- 0.05/12; n <- 12
+print(A <- P*(r_monthly/n)*((1+r_monthly/n)^(n*t))/((1+r_monthly/n)^(n*t)-1))
+# A is the monthly mortgage payment
+
+## 3.3
+P <- 100; r <- 0.08; n <- 12; t <- 3
+Deposit <- P*(1+r/n)^(n^t) 
+print(Deposit)
+
+## 3.6
+n <- c(5)
+print(n)
+if (n%%2 == 0){
+    print ("1")
+} else {
+    print ("0")
+}
+
+# a single R commando that display 1 if the value
+# stored in n is even, and 0 if the value stored in n is odd.
+
+n <- 6
+as.integer(n %% 2 == 0)  # Outputs 1
+
+n <- 7
+as.integer(n %% 2 == 0)  # Outputs 0
+?as.integer
+
+
+## 3.7
+a <- 1; b <- 2; c <- 3;d <- 4
+discriminant <- 18*a*b*c*d - 4*b^3*d + b^2*c^2 -4*a*c^3-27*a^2*d^2
+print(discriminant)
+
+## 3.8
+a <- 2; b <- 3;c <- 4
+s <- (a+b+c)/2
+area_of_triangle <-  sqrt(s*(s-a)*(s-b)*(s-c))
+print(area_of_triangle)
