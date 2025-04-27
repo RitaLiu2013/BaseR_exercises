@@ -1,0 +1,48 @@
+## Exericse in ch.6
+
+## 6.1
+x <- array(1:18,dim=c(3,3,2))
+x
+x[2:3,-2,2]
+
+## 6.2
+#It is true that a matrix is a special case of an array.
+
+## 6.3
+
+a <- array(1:60, c(3,4,5))
+a
+b <- a[c(1,3), c(-1,-4),3:5]
+b
+b1 <- a[c(1,3), c(2,3),3:5]
+b1==b
+
+
+## 6.4
+A <- a
+dim(A)
+total_elements_in_A <- dim(A)[1]*dim(A)[2]*dim(A)[3]
+total_elements_in_A
+
+
+## 6.5
+A <- array(1:24, c(2,3,4))
+B <- A[,2,]
+B
+B1 <- drop(A[c(1:2,1:4)])
+B1
+
+## 6.6
+photographs <- array(1:100, c(100,1000,1500,3))
+photographs[6, , , 2]
+
+# since the last index of photographs matix is color: red, green, blue.
+# and we are aksed to determine the amount of green in the lower-right-hand
+#corner of the sixth photo stored in photos.
+
+## 6.7
+
+matrix_A <-  array(1:360, c(3,4,5,6))
+dim(matrix_A)
+new_matrix <- matrix_A[c(1,3), 2,5,-4]
+dim(new_matrix)
