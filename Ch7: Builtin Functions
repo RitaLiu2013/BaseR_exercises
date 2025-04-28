@@ -173,11 +173,46 @@ t(apply(A, 1, sort))
 # [1,]    1    2    3
 # [2,]    4    5    6
 
+
 ## 7.27
 # Use append function to place the vector c(-1,0,1) in the middle of the vector 1:10.
 values <- 1:10
 append(values, c(-1,0,1),  after=5)
 
+
+## 7.28
+x <- 1:10
+x[length(x)%%2] # [1] 0 1 1 2 2 3 3 4 4 5
+x%%2 # return  [1] 1 0 1 0 1 0 1 0 1 0
+x[x%%2==1] # this returns all the odd-indexed elements
+
+## 7.29
+# Find the sample mean of the odd-valued elements of x.
+x <- 1:10
+mean(x[x%%2==1])
+
+## 7.30
+# compute the weighted average of a data matrix
+weights <- c(0.2,0.15,0.3,0.35)
+Dan <- c(82,0,94,97)
+Melinda_original <- c(87,NA,98,98)
+Melinda <- c(87,as.integer((87+98+98)/3),98,98)
+Caleb <- c(77,93,81,74)
+Benjamin <- c(82,78,91,88)
+data <- rbind(Dan,Melinda,Caleb,Benjamin) 
+data
+weighted_average <- weights*data
+weighted_average
+0.2*(82+87+77+82)
+sum(weighted_average[,1])
+16.4+13.05+23.1+28.7
+total_weight_of_4_students <- sum(weights*Dan) + sum(weights*Melinda) + sum(weights*Caleb) + sum(weights*Benjamin)
+weighted_average <- total_weight_of_4_students/4
+weighted_average
+
+## any easier alternatives?
+# data %*% weights does row-wise weighted sums automatically.
+mean(data %*% weights)
 
 
 
